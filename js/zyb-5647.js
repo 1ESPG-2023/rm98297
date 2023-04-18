@@ -19,15 +19,44 @@
 //     //     })
 // })
 
-//convertendo HtmlColecction em arae forma indireta
-const liElementHTML = document.getElementsByTagName("li");
-const liElementArray = [...liElementHTML];
+// //convertendo HtmlColecction em arae forma indireta
+// const liElementHTML = document.getElementsByTagName("li");
+// const liElementArray = [...liElementHTML];
 
-liElementArray.map((item,key)=>{
+// liElementArray.map((item,key)=>{
 
-        if (item.textContent == "item-39"){
+//         if (item.textContent == "item-39"){
 
-            console.log(`${key+ 1} - ${item.textcontent = "LOCALIZADO"}`)
-        }
-})
+//             console.log(`${key+ 1} - ${item.textcontent = "LOCALIZADO"}`)
+//         }
+// })
+
+
+
+function soma(parametro) {
+
+    nr1 = 10
+
+    nr2 = 20
+
+
+    return (parseInt(nr1) + parseInt(nr2) + parseInt(parametro))
+
+    // console.log(`Resultado : ${parseInt(nr1) + parseInt(nr2) + parseInt(parametro)}`)
+    // console.log(`Este é o parametro que foi passado para a função : ${parametro}`)
+
+}
+
+
+// Arrow Function
+
+const mudaCOR = ()=> {
+
+    setTimeout(soma(1,2,3),5000);
+
+}
+
+mudaCOR()
+
+
 
