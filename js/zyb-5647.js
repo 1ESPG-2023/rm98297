@@ -33,30 +33,72 @@
 
 
 
-function soma(parametro) {
+// function soma(parametro) {
 
-    nr1 = 10
+//     nr1 = 10
 
-    nr2 = 20
+//     nr2 = 20
 
 
-    return (parseInt(nr1) + parseInt(nr2) + parseInt(parametro))
+//     return (parseInt(nr1) + parseInt(nr2) + parseInt(parametro))
 
-    // console.log(`Resultado : ${parseInt(nr1) + parseInt(nr2) + parseInt(parametro)}`)
-    // console.log(`Este é o parametro que foi passado para a função : ${parametro}`)
+//     // console.log(`Resultado : ${parseInt(nr1) + parseInt(nr2) + parseInt(parametro)}`)
+//     // console.log(`Este é o parametro que foi passado para a função : ${parametro}`)
+
+// }
+
+
+// // Arrow Function
+
+// const mudaCOR = ()=> {
+
+//     setTimeout(soma(1,2,3),5000);
+
+// }
+
+// mudaCOR()
+
+
+// function mudaCOR() {
+
+//     let r = "";
+//     let g = "";
+//     let b = "";
+
+//     //random = Gera números aleatórios entre 0 e 1
+//     //ceil, floor e round que arredondam o número para cima, para baixo ou aleatoriamente.
+
+//     //determinando  vavariáel r um valor entre 0 e 255
+
+//     r = Math.round(Math.random()* 255);
+//     g = Math.round(Math.random()* 255);
+//     b = Math.round(Math.random()* 255);
+
+//     const cabecalho =  document.querySelector(".cabecalho");
+
+
+//     cabecalho.setAttribute("style",`background-color:rgb(${r},${g},${b})`)
+
+//     tmp = setTimeout(mudaCOR,100);
+// }   
+
+// mudaCOR();
+
+
+//função altera banner
+
+function alteraBanner(){
+
+    let numero = Math.round(Math.random() * 3);
+
+    let caminho = `img/banner-lateral-${nr}.png`;
+
+    const img1 = document.querySelector(".l-e > img");
+
+    img1.src = caminho;
 
 }
 
-
-// Arrow Function
-
-const mudaCOR = ()=> {
-
-    setTimeout(soma(1,2,3),5000);
-
-}
-
-mudaCOR()
-
+alteraBanner();
 
 

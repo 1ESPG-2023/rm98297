@@ -4,28 +4,37 @@
     justify-content: center;
     width: 100vh;
     height: 20vh;
-    align-items: baseline;
+    align-items: center;
     color: white;
     background-color: darkgreen;
 }
 
+img{
+    display: block;
+    width: 15%;
+   
+}
 .container{
     display: flex;
     justify-content: space-between;
     width: 100vh;
-    height:60vh;
+    height:auto;
     background-color: blueviolet;
 }
 
-.container .l-e{
+.l-e{
 
     flex-grow: 1;
     background-color: aqua;
 }
 
-.container .l-d{
-
+.central {
     flex-grow: 5;
+}
+
+ .l-d{
+
+    flex-grow: 1;
     background-color: coral;
 
 }
