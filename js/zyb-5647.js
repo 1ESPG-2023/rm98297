@@ -48,7 +48,7 @@
 // }
 
 
-// // Arrow Function
+//  Arrow Function
 
 // const mudaCOR = ()=> {
 
@@ -59,46 +59,146 @@
 // mudaCOR()
 
 
-// function mudaCOR() {
+function mudaCOR() {
 
-//     let r = "";
-//     let g = "";
-//     let b = "";
+     let r = "";
+     let g = "";
+     let b = "";
 
-//     //random = Gera números aleatórios entre 0 e 1
-//     //ceil, floor e round que arredondam o número para cima, para baixo ou aleatoriamente.
+   //random = Gera números aleatórios entre 0 e 1
+     //ceil, floor e round que arredondam o número para cima, para baixo ou aleatoriamente.
 
-//     //determinando  vavariáel r um valor entre 0 e 255
+    //determinando  vavariáel r um valor entre 0 e 255
 
-//     r = Math.round(Math.random()* 255);
-//     g = Math.round(Math.random()* 255);
-//     b = Math.round(Math.random()* 255);
+     r = Math.round(Math.random()* 255);
+     g = Math.round(Math.random()* 255);
+     b = Math.round(Math.random()* 255);
 
-//     const cabecalho =  document.querySelector(".cabecalho");
+    const cabecalho =  document.querySelector(".cabecalho");
 
 
-//     cabecalho.setAttribute("style",`background-color:rgb(${r},${g},${b})`)
+    cabecalho.setAttribute("style",`background-color:rgb(${r},${g},${b})`)
 
-//     tmp = setTimeout(mudaCOR,100);
-// }   
+     tmp = setTimeout(mudaCOR,1000);
+ }   
 
-// mudaCOR();
+//  mudaCOR();
 
 
 //função altera banner
 
 function alteraBanner(){
+    
 
-    let numero = Math.round(Math.random() * 3);
+    let nr = Math.ceil(Math.random() * 3);
+    const img1 = document.querySelector(".l-e > img");
+    const img2 = document.querySelector(".l-d > img");
+
 
     let caminho = `img/banner-lateral-${nr}.png`;
 
-    const img1 = document.querySelector(".l-e > img");
-
     img1.src = caminho;
+
+    nr = Math.ceil(Math.random() * 3);
+    caminho = `img/banner-lateral-${nr}.png`;
+    img2.src = caminho;
+
+    setTimeout(alteraBanner,1000)
+
+
+
+    
+
+    
 
 }
 
-alteraBanner();
+//  alteraBanner();
 
+const botao = document.querySelector(".central button");
+
+botao.addEventListener("click" ,()=> {
+
+    const img_l = document.querySelector(".central img");
+   
+
+    if( botao.textContent == "LIGAR"){
+
+        img_l.src = "./img/pic_bulbon.gif"
+
+        botao.textContent = "DESLIGAR"
+
+    }
+
+    else{
+        img_l.src = "./img/pic_bulboff.gif"
+        botao.textContent = "LIGAR"
+
+
+    }
+
+})
+
+
+// function ligarlampada() {
+
+//     const img_l = document.querySelector(".central img");
+   
+
+//     if( botao.textContent == "LIGAR"){
+
+//         img_l.src = "./img/pic_bulbon.gif"
+
+//         botao.textContent = "DESLIGAR"
+
+//     }
+
+//     else{
+//         img_l.src = "./img/pic_bulboff.gif"
+//         botao.textContent = "LIGAR"
+
+
+//     }
+
+// }
+
+//ligarlampada()
+
+
+
+const inputUser = document.querySelector("input[name ='nmUser']");
+const labelUser = document.querySelector("label[for]")
+
+inputUser.addEventListener("focus", ()=>{
+    inputUser.setAttribute("style", "outline-color: #ff0000");
+    labelUser.setAttribute("style", "color: #ff0000")
+   
+
+
+
+});
+
+inputUser.addEventListener("keyup", ()=>{
+
+    inputUser.setAttribute("style", "outine-color:#ff0000" )
+    
+
+
+    if(inputUser.value.length< 8){
+        inputUser.setAttribute("style", "outline-color: #ff0000");
+        labelUser.setAttribute("style", "color: #ff0000")
+
+
+    }else{
+
+        inputUser.setAttribute("style", "outline-color: #008000");
+        labelUser.setAttribute("style", "color: #000000")
+
+
+
+    }
+
+
+
+})
 
